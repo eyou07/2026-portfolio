@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Eunpyo Lee</title>
+
+        <link rel="stylesheet"  href="style.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    </head>
+
+
+    <body>
+        <div class="frame">
+
+            <nav class="navigator">
+                <a href="index.html"><h3 class="site-name">EUNpyo!</h3></a>
+                <ul>
+                    <li><a class="nav-menu" href="projects.html">PROJECTS</a></li>
+                    <li><a class="nav-menu" href="about.html">ABOUT</a></li>
+                
+                </ul>
+            </nav>
+
+            <div class="project-filter">
+                <button class="filter-btn active" data-category="all">All</button>
+                <button class="filter-btn" data-category="textile">Textile</button>
+                <button class="filter-btn" data-category="drawing">Drawing</button>
+                <button class="filter-btn" data-category="photography">Photography</button>
+            </div>
+
+            <div class="project-gallery">
+                <div class="project-item" data-category="textile">
+                    <img src="https://images.unsplash.com/photo-1558769132-cb1aea1f1d5c?w=400&h=500&fit=crop" alt="Textile 1">
+                </div>
+                <div class="project-item" data-category="textile">
+                    <img src="https://images.unsplash.com/photo-1610701596007-11502861dcfa?w=400&h=500&fit=crop" alt="Textile 2">
+                </div>
+                <div class="project-item" data-category="drawing">
+                    <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=400&h=500&fit=crop" alt="Drawing 1">
+                </div>
+                <div class="project-item" data-category="drawing">
+                    <img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=400&h=500&fit=crop" alt="Drawing 2">
+                </div>
+                <div class="project-item" data-category="photography">
+                    <img src="https://images.unsplash.com/photo-1452587925148-ce544e77e70d?w=400&h=500&fit=crop" alt="Photography 1">
+                </div>
+                <div class="project-item" data-category="photography">
+                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=500&fit=crop" alt="Photography 2">
+                </div>
+            </div>
+
+            <script>
+                const filterBtns = document.querySelectorAll('.filter-btn');
+                const projectItems = document.querySelectorAll('.project-item');
+
+                filterBtns.forEach(btn => {
+                    btn.addEventListener('click', () => {
+                        const category = btn.dataset.category;
+                        
+                        filterBtns.forEach(b => b.classList.remove('active'));
+                        btn.classList.add('active');
+                        
+                        projectItems.forEach(item => {
+                            if (category === 'all' || item.dataset.category === category) {
+                                item.style.display = 'block';
+                            } else {
+                                item.style.display = 'none';
+                            }
+                        });
+                    });
+                });
+            </script>
+
+            <footer class="work-footer">
+                <h6 class="reserved">© 2026 Eunpyo. ALL RIGHTS RESERVED.</h6>
+            </footer>
+
+</body>
+
+</html>
