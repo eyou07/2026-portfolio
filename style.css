@@ -1,0 +1,94 @@
+
+body {
+    background-color:white;
+}
+
+
+.frame{
+    margin: 50px  50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.navigator{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+li{
+    display: inline;
+    align-self: center;
+    margin: 0;
+    margin-left: 15px;
+    text-decoration: none;
+}
+
+ul{
+    margin: 0;
+
+}
+
+.site-name{
+    margin: 0;
+    font-family: "montserrat", ui-sans-serif, sans-serif;
+    font-size:  24px;
+    color: black;
+}
+
+.nav-menu{
+    font-family: "montserrat", ui-sans-serif, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+a:hover{
+    color: gray;
+    transition: 0.3s;
+}
+
+/* DASHBOARD */
+
+.dashboard{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+
+}
+
+.first-comment{
+    font-family: "Montserrat", ui-sans-serif, system-ui, sans-serif;
+    font-size: 70px;
+    font-weight: 300;
+    font-style: italic;
+    
+    accent-color: #fdf2f8; /* very light pink */
+    
+
+}
+
+.next-comment{
+
+    font-family: "montserrat", ui-sans-serif, sans-serif;
+    font-size: 15px;
+    font-weight: 200;
+    margin-top: 0;
+    color: grey;
+    font-style: normal;
+
+}
+
+/* Footer */
+
+.reserved{
+
+    font-family: "montserrat", ui-sans-serif, sans-serif;
+    font-size: 12px;
+    font-weight: 200;
+}
