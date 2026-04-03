@@ -407,7 +407,7 @@ Die Kapsel enthält Kammern, deren Wände sich vertikal, sternförmig nach auße
                 }
 
                 function doMasonry(gallery) {
-                    const cols = 3;
+                    const cols = window.innerWidth <= 768 ? 1 : 3;
                     const gap = 20;
                     const colWidth = (gallery.offsetWidth - gap * (cols - 1)) / cols;
                     const colHeights = Array(cols).fill(0);
