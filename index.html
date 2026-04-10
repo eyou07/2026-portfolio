@@ -236,10 +236,10 @@ können wir eine tiefe innere Ruhe verspüren.</p>
                         <img src="https://res.cloudinary.com/dhxujjpio/image/upload/q_50/v1773760303/01_Eunpyo_psxvbd.png" alt="7">
                         <img src="https://res.cloudinary.com/dhxujjpio/image/upload/q_50/v1773760316/ss24_012_xansge.jpg" alt="8">
                         <div class="modal-video">
-                            <iframe src="https://res.cloudinary.com/dhxujjpio/video/upload/v1775233156/1_rpy1rr.mp4" 1></iframe>
+                            <video src="https://res.cloudinary.com/dhxujjpio/video/upload/v1775233156/1_rpy1rr.mp4" controls muted playsinline></video>
                         </div>
                         <div class="modal-video">
-                            <iframe src="https://res.cloudinary.com/dhxujjpio/video/upload/v1775233158/2_xu1wkb.mp4" 2></iframe>
+                            <video src="https://res.cloudinary.com/dhxujjpio/video/upload/v1775233158/2_xu1wkb.mp4" controls muted playsinline></video>
                         </div>
                     </div>
                 </div>
@@ -412,7 +412,6 @@ Die Kapsel enthält Kammern, deren Wände sich vertikal, sternförmig nach auße
                     const colWidth = (gallery.offsetWidth - gap * (cols - 1)) / cols;
                     const colHeights = Array(cols).fill(0);
                     const items = gallery.querySelectorAll('img, .modal-video');
-
                     gallery.style.position = 'relative';
                     gallery.style.display = 'block';
 
@@ -436,12 +435,10 @@ Die Kapsel enthält Kammern, deren Wände sich vertikal, sternförmig nach auße
                             item.style.height = h + 'px';
                             item.style.paddingBottom = '0';
                             item.style.overflow = 'hidden';
-                            const iframe = item.querySelector('iframe');
-                            if (iframe) {
-                                iframe.style.position = 'static';
-                                iframe.style.width = '100%';
-                                iframe.style.height = (h + 60) + 'px';
-                                iframe.style.marginTop = '-30px';
+                            const video = item.querySelector('video');
+                            if (video) {
+                                video.style.width = '100%';
+                                video.style.height = h + 'px';
                             }
                         }
 
@@ -460,7 +457,7 @@ Die Kapsel enthält Kammern, deren Wände sich vertikal, sternförmig nach auße
                     <h3 class="contacttext">I'm always excited to connect and collaborate. <br>Feel free to reach out!</h3>
                     <li><a href="https://www.instagram.com/elov.archive">Instagram</a></li>
                     <li><a href="">eyou@posteo.de</a></li>
-                    <img class="contact-img" src="https://res.cloudinary.com/dhxujjpio/image/upload/q_50/v1773683616/knitting_02_boxh6k.png" alt="me" width="250px">
+                    <img class="contact-img" src="https://res.cloudinary.com/dhxujjpio/image/upload/q_50/v1773683616/knitting_02_boxh6k.png" alt="me" width="500px">
                 </div>
             </div>
 

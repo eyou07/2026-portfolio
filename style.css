@@ -513,7 +513,6 @@ a:hover{
 
 .contact-img {
     margin-top: 40px;
-    margin-right: 80px;
     align-self: flex-end;
 }
 
@@ -547,9 +546,9 @@ a:hover{
     margin-bottom: 20px;
 }
 
-.modal-video iframe {
+.modal-video video {
     display: block;
     width: 100%;
+    height: auto;
     border: none;
-    transform: scale(1.01);
 }
